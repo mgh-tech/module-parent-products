@@ -1,0 +1,15 @@
+<!--
+  Copyright © MGH-tech. All rights reserved.
+  See LICENSE.txt for license details.
+-->
+<div class="admin__field-control">
+    <!-- ko if: value -->
+    <a data-bind="attr: {href: value, title: $t('Edit Product')}" target="_blank" class="action-edit">
+        <span data-bind="text: $t('Edit')"></span>
+    </a>
+    <!-- /ko -->
+    <!-- ko ifnot: value -->
+    <span class="no-action">&mdash;</span>
+    <!-- /ko -->
+</div>
+

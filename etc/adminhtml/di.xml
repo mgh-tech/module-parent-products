@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+  Copyright © MGH-tech. All rights reserved.
+  See LICENSE.txt for license details.
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Merge our custom modifier into the existing product form modifier pool without overriding core modifiers -->
+    <virtualType name="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="parent_products" xsi:type="array">
+                    <item name="class" xsi:type="string">MGH\ParentProducts\Ui\DataProvider\Product\Form\Modifier\ParentProducts</item>
+                    <item name="sortOrder" xsi:type="number">115</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>

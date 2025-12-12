@@ -1,0 +1,18 @@
+{
+  "name": "mgh-tech/module-parent-products",
+  "description": "Magento2 Admin product form section listing parent products (grouped, configurable, bundle) for current product.",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": ["proprietary"],
+  "require": {
+    "php": ">=8.1",
+    "magento/module-catalog": "*"
+  },
+  "autoload": {
+    "files": ["registration.php"],
+    "psr-4": {
+      "MGH\\ParentProducts\\": ""
+    }
+  }
+}
+
