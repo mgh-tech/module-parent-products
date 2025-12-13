@@ -1,5 +1,5 @@
-# MGH_ParentProducts
-[![Latest Stable Version](http://poser.pugx.org/mgh-tech/magento2-parent-products/v)](https://packagist.org/packages/mgh-tech/magento2-parent-products) [![Total Downloads](http://poser.pugx.org/mgh-tech/magento2-parent-products/downloads)](https://packagist.org/packages/mgh-tech/magento2-parent-products) [![Latest Unstable Version](http://poser.pugx.org/mgh-tech/magento2-parent-products/v/unstable)](https://packagist.org/packages/mgh-tech/magento2-parent-products) [![License](http://poser.pugx.org/mgh-tech/magento2-parent-products/license)](https://packagist.org/packages/mgh-tech/magento2-parent-products) [![PHP Version Require](http://poser.pugx.org/mgh-tech/magento2-parent-products/require/php)](https://packagist.org/packages/mgh-tech/magento2-parent-products)
+# Magento2 Admin ParentProducts
+[![Latest Stable Version](http://poser.pugx.org/mgh-tech/module-parent-products/v)](https://packagist.org/packages/mgh-tech/module-parent-products) [![Total Downloads](http://poser.pugx.org/mgh-tech/module-parent-products/downloads)](https://packagist.org/packages/mgh-tech/module-parent-products) [![Latest Unstable Version](http://poser.pugx.org/mgh-tech/module-parent-products/v/unstable)](https://packagist.org/packages/mgh-tech/module-parent-products) [![License](http://poser.pugx.org/mgh-tech/module-parent-products/license)](https://packagist.org/packages/mgh-tech/module-parent-products) [![PHP Version Require](http://poser.pugx.org/mgh-tech/module-parent-products/require/php)](https://packagist.org/packages/mgh-tech/module-parent-products)
 
 A Magento 2 admin module that displays a fieldset listing all parent products (Configurable, Grouped, Bundle) referencing the current product in the product edit form.
 
@@ -9,7 +9,20 @@ A Magento 2 admin module that displays a fieldset listing all parent products (C
 
 ## Problem & Solution
 
-Ever found yourself lost in Magento's admin, desperately trying to figure out which configurable, grouped, or bundle products reference the simple product you're editing? Have you ever needed to navigate back to the product grid—or, even worse, run a database query—just to find a parent product? If so, this module is for you. Now you get a clear, instant overview of all parent products referencing the current product, right in the admin product edit form. No more wild goose chases.
+Ever found yourself lost in Magento's admin, desperately trying to figure out which configurable, grouped, or bundle products reference the simple product you're editing? 
+Have you ever needed to navigate back to the product grid or, even worse, run a database query just to find a parent product? 
+
+If so, this module is for you. 
+Now you get a clear, instant overview of all parent products referencing the current product, right in the admin product edit form. 
+
+No more wild goose chases.
+
+**Before**
+<img width="3698" height="1923" alt="Without parent product feature" src="https://github.com/user-attachments/assets/c3688db7-04f0-442e-80cc-ac86fd46dc20" />
+**After**
+<img width="3698" height="1923" alt="Parent products grouped/bundle" src="https://github.com/user-attachments/assets/dd3e2c8a-96a8-4aea-a4f7-8b9c7f225d43" />
+<img width="3698" height="1923" alt="Parent product configurable" src="https://github.com/user-attachments/assets/8d26f6fd-367a-48cf-98f0-ec32da2c2788" />
+
 
 ### How It Works
 
