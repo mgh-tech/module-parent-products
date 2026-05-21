@@ -8,11 +8,13 @@ declare(strict_types=1);
 
 namespace MGH\ParentProducts\Model;
 
+use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Bundle\Model\Product\Type as Bundle;
 use Magento\ConfigurableProduct\Model\Product\Type\Configurable;
 use Magento\GroupedProduct\Model\Product\Type\Grouped;
 use MGH\ParentProducts\Api\ParentProductsProviderInterface;
 use Magento\Framework\App\ResourceConnection;
+use Magento\Framework\EntityManager\MetadataPool;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 use Magento\Backend\Model\UrlInterface;
 
@@ -20,6 +22,7 @@ class ParentProductsProvider implements ParentProductsProviderInterface
 {
     public function __construct(
         private readonly ResourceConnection $resource,
+        private readonly MetadataPool $metadataPool,
         private readonly ProductCollectionFactory $productCollectionFactory,
         private readonly UrlInterface $backendUrl
     ) {
@@ -56,7 +59,8 @@ class ParentProductsProvider implements ParentProductsProviderInterface
 
         $collection = $this->productCollectionFactory->create();
         $collection->addAttributeToSelect(['name', 'sku', 'type_id']);
-        $collection->addFieldToFilter('entity_id', ['in' => $parentIds]);
+        $linkField = $this->metadataPool->getMetadata(ProductInterface::class)->getLinkField();
+        $collection->addFieldToFilter($linkField, ['in' => $parentIds]);
 
         $rows = [];
         foreach ($collection as $parent) {

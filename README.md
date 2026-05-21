@@ -48,7 +48,7 @@ When editing a product in the Magento admin:
 ### Option 1: Via Composer (Recommended)
 
 ```bash
-composer require mgh-tech/magento2-parent-products
+composer require mgh-tech/magento-parent-products
 bin/magento setup:upgrade
 ```
 
@@ -86,7 +86,7 @@ Alternatively, configure the module using the command line:
 
 ```bash
 # Enable the module
-bin/magento config:set mgh_parentproducts/general/enabled 1
+bin/magento config:set parentproducts/general/enable 1
 ```
 
 ## Requirements
