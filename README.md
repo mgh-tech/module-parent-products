@@ -7,6 +7,7 @@ A Magento 2 admin module that displays a fieldset listing all parent products (C
 
 **MGH_ParentProducts** enhances the Magento admin product edit experience by providing a clear, ACL-protected overview of parent product relationships. This is especially useful for catalog managers and merchandisers working with complex product structures.
 
+[![Watch a one-minute video tour of module-parent-products](https://gitdiagram.com/video-badge.svg)](https://gitdiagram.com/mgh-tech/module-parent-products/video)
 ## Problem & Solution
 
 Ever found yourself lost in Magento's admin, desperately trying to figure out which configurable, grouped, or bundle products reference the simple product you're editing? 
